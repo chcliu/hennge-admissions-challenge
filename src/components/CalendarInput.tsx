@@ -16,9 +16,9 @@ const CalendarInput: React.FC<Props> = ({ dateRange, onClick, tempDateRange }) =
         <div className="calendar-input" onClick={onClick}>
             <img className="calendar-input__icon" src="../../public/images/icon_calender.svg" />
             <div className="calendar-input__dates">
-                <Moment date={startDate} format="YYYY/MM/D" />
+                <Moment date={startDate} format="YYYY/M/D" />
                 <span> - </span>
-                <Moment date={endDate} format="YYYY/MM/D" />
+                <Moment date={endDate} format="YYYY/M/D" />
             </div>
         </div>
     );
