@@ -9,6 +9,10 @@ module.exports = {
             { test: /\.css?$/, use: [{ loader: 'style-loader' }, { loader: 'css-loader' }] },
             { test: /\.scss$/, use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }] },
             { test: /\.(jpg|png)$/, use: { loader: 'file-loader', options: { name: '[path][name].[hash].[ext]' } } },
+            {
+                test: /\.svg$/,
+                use: [{ loader: 'babel-loader' }, { loader: 'react-svg-loader', options: { jsx: true } }],
+            },
         ],
     },
     output: { path: path.join(__dirname, '/dist'), filename: 'bundle.js' },
