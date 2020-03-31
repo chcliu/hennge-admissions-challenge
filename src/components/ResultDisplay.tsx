@@ -7,7 +7,7 @@ interface Props {
 const ResultDisplay: React.FC<Props> = ({ emailCount }) => {
     return (
         <div className="result-display">
-            Results: <span className="email-count">{emailCount}</span>mail(s)
+            Results: <span className="result-display__count">{emailCount}</span> mail(s)
         </div>
     );
 };
