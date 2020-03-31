@@ -7,11 +7,15 @@ import DateRangeBar from './DateRangeBar';
 import '../styles/index.scss';
 
 const App: React.FC = () => {
-    const [dateRange, setDateRange] = useState({ startDate: new Date('2019/12/31'), endDate: new Date('2020/1/3') });
+    const [dateRange, setDateRange] = useState({
+        startDate: new Date('2019/12/31'),
+        endDate: new Date('2020/1/3'),
+    });
+    const [isLoading, setIsLoading] = useState(false);
     const [emailCount, setEmailCount] = useState(0);
     return (
         <>
-            <DateRangeBar dateRange={dateRange} setDateRange={setDateRange} />
+            <DateRangeBar dateRange={dateRange} setDateRange={setDateRange} setIsLoading={setIsLoading} />
             <ResultDisplay emailCount={emailCount} />
             <Inbox emailCount={emailCount} setEmailCount={setEmailCount} dateRange={dateRange} />
         </>

@@ -3,10 +3,23 @@
     height: 2.5rem;
     display: grid;
     grid-template-columns: $date-range-bar-columns;
+    margin: 2rem 0;
+}
+
+.date-range-bar__button {
+    background-color: $top-bar-color;
     border: 1px solid $border-color;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     -webkit-box-shadow: 0px 0px 2px 2px rgba(225, 225, 225, 0.45);
     -moz-box-shadow: 0px 0px 2px 2px rgba(225, 225, 225, 0.45);
     box-shadow: 0px 0px 2px 2px rgba(226, 226, 226, 0.45);
-    margin: 2rem 0;
+}
+.date-range-bar__button:focus {
+    outline: none;
+}
+
+.date-range-bar__search-icon {
+    padding: 0;
+    width: 1.2rem;
+    height: 1.2rem;
 }
