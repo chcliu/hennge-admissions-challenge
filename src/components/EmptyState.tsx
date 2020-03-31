@@ -1,11 +1,7 @@
 import React from 'react';
 
 const EmptyState: React.FC = () => {
-    return (
-        <div className="empty-state">
-            <img src="../../public/images/logo.png" />
-        </div>
-    );
+    return <img className="empty-state" src="../../public/images/logo.png" />;
 };
 
 export default EmptyState;
