@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+    padding: 0% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+$date-range-bar-columns: 80% 20%;
