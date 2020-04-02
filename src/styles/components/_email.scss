@@ -1,0 +1,57 @@
+.email {
+    height: 1rem;
+    padding: 0.75rem 0;
+    display: grid;
+    grid-template-columns: $inbox-columns;
+    align-items: center;
+
+    font-family: $default-font-family;
+    font-size: 1.1rem;
+    border-bottom: $default-border-settings;
+}
+
+.email:hover {
+    background-color: $primary-color;
+    color: $link-color;
+    cursor: pointer;
+}
+
+.email__from {
+    @include overflow-ellipsis;
+    grid-column: 1;
+    padding-left: 1rem;
+}
+
+.email__to {
+    @include overflow-ellipsis;
+    grid-column: 3;
+}
+
+.email__message-count {
+    grid-column: 4;
+    width: 1.5rem;
+    line-height: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: $multiple-email-indicator-color;
+    font-size: 0.8rem;
+}
+
+.email__subject {
+    @include overflow-ellipsis;
+    grid-column: 5;
+}
+
+.email__attachment {
+    grid-column: 7;
+    width: 1rem;
+}
+
+.email__date {
+    grid-column: 8;
+    font-size: 1rem;
+    font-weight: bold;
+}
