@@ -8,8 +8,8 @@ import '../styles/index.scss';
 
 const App: React.FC = () => {
     const [dateRange, setDateRange] = useState({
-        startDate: new Date('2019/12/31'),
-        endDate: new Date('2020/1/3'),
+        startDate: new Date('2019/06/01'),
+        endDate: new Date(),
     });
     const [isLoading, setIsLoading] = useState(false);
     const [emailCount, setEmailCount] = useState(0);
