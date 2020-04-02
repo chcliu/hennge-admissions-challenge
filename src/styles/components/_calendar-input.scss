@@ -3,11 +3,9 @@
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    border: 1px solid $border-color;
+    border: $default-border-settings;
     border-radius: 5px 0 0 5px;
-    -webkit-box-shadow: 0px 0px 2px 2px rgba(225, 225, 225, 0.45);
-    -moz-box-shadow: 0px 0px 2px 2px rgba(225, 225, 225, 0.45);
-    box-shadow: 0px 0px 2px 2px rgba(226, 226, 226, 0.45);
+    @include date-input-box-shadow;
 }
 
 .calendar-input__icon {
@@ -17,5 +15,5 @@
 
 .calendar-input__dates {
     padding-left: 1rem;
-    font-family: Helvetica;
+    font-family: $default-font-family;
 }

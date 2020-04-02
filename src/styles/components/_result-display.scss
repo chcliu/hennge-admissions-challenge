@@ -1,11 +1,14 @@
 .result-display {
     display: block;
-    border-bottom: 1px solid lightgrey;
-    font-family: Helvetica;
-    color: $result-display-color;
+    padding-bottom: 0.5rem;
+    border-bottom: $default-border-settings;
+
+    color: $header-text-color;
+    font-size: 0.9rem;
     font-weight: bold;
+    font-family: $default-font-family;
 }
 
 .result-display__count {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
