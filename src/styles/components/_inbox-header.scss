@@ -1,0 +1,30 @@
+.inbox-header {
+    width: 100%;
+    height: 1rem;
+    padding: 0.75rem 0;
+
+    display: grid;
+    grid-template-columns: $inbox-columns;
+    align-items: center;
+    border-bottom: $default-border-settings;
+
+    font-family: $default-font-family;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: $header-text-color;
+    background-color: $primary-color;
+}
+
+.inbox-header__from {
+    grid-column: 1;
+    padding-left: 1rem;
+}
+.inbox-header__to {
+    grid-column: 3;
+}
+.inbox-header__subject {
+    grid-column: 5;
+}
+.inbox-header__date {
+    grid-column: 8;
+}
