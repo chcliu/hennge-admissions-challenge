@@ -1,0 +1,29 @@
+.calendar {
+    padding: 1rem;
+}
+
+.calendar__dotw {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.calendar__week {
+    display: flex;
+    justify-content: space-evenly;
+}
+.calendar__day {
+    border: none;
+    font-size: 1rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.calendar__different-month {
+    background-color: lightgray;
+}
+
+.calendar__selected {
+    background-color: lightskyblue;
+    border-radius: 50%;
+}

@@ -27,6 +27,12 @@ const DateRangeBar: React.FC<Props> = ({ dateRange, setDateRange }) => {
             <button className="date-range-bar__button clickable" onClick={onSearchButtonClick}>
                 <img className="date-range-bar__search-icon" src="../../public/images/icon_search.svg" />
             </button>
+            <DatePicker
+                setTempDateRange={setTempDateRange}
+                showDatePicker={showDatePicker}
+                tempDateRange={tempDateRange}
+                toggleDatePicker={toggleDatePicker}
+            />
         </div>
     );
 };

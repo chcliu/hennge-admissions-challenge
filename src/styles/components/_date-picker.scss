@@ -1,0 +1,27 @@
+.date-picker {
+    height: 15rem;
+    width: 18rem;
+    margin-top: 0.2rem;
+    z-index: 1;
+
+    @include date-picker-box-shadow;
+    border-radius: 5px;
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: 15% 85%;
+}
+
+.date-picker__hidden {
+    display: none;
+}
+.date-picker__header {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.date-picker__header-child {
+    height: 100%;
+    text-align: center;
+    line-height: 2.2rem;
+}
