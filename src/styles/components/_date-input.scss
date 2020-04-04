@@ -1,4 +1,4 @@
-.calendar-input {
+.date-input {
     grid-column: 1;
     padding: 0.5rem 1rem;
     display: flex;
@@ -8,12 +8,12 @@
     @include date-input-box-shadow;
 }
 
-.calendar-input__icon {
+.date-input__icon {
     width: 1.3rem;
     height: 1.3rem;
 }
 
-.calendar-input__dates {
+.date-input__text {
     padding-left: 1rem;
     font-family: $default-font-family;
 }

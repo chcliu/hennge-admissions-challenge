@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { DateRange, SetDateRange } from '../types/index';
 
-import CalendarInput from './CalendarInput';
+import DateInput from './DateInput';
 
 interface Props {
     dateRange: DateRange;
@@ -22,7 +22,7 @@ const DateRangeBar: React.FC<Props> = ({ dateRange, setDateRange }) => {
 
     return (
         <div className="date-range-bar">
-            <CalendarInput dateRange={dateRange} tempDateRange={tempDateRange} toggleDatePicker={toggleDatePicker} />
+            <DateInput dateRange={dateRange} tempDateRange={tempDateRange} toggleDatePicker={toggleDatePicker} />
             <button className="date-range-bar__button" onClick={onSearchButtonClick}>
                 <img className="date-range-bar__search-icon" src="../../public/images/icon_search.svg" />
             </button>
