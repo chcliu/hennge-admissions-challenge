@@ -2,15 +2,16 @@ import React from 'react';
 import moment from 'moment';
 
 import { EmailType } from '../types/index';
+import { DEFAULT_DATE_FORMAT, SAME_YEAR_DATE_FORMAT, SAME_DAY_DATE_FORMAT } from '../utils/date-helper';
 
 const Email: React.FC<EmailType> = ({ from, to, subject, body, messageCount, hasAttachment, date }) => {
     const dateMoment = moment(date);
-    const isSameDay = !moment().diff(dateMoment, 'days');
-    const isSameYear = !(new Date().getFullYear() - date.getFullYear());
+    const isSameDay = moment().isSame(dateMoment, 'day');
+    const isSameYear = moment().isSame(dateMoment, 'year');
 
     let format;
-    if (isSameDay) format = 'H:mm';
-    else format = isSameYear ? 'MMM DD' : 'YYYY/MM/DD';
+    if (isSameDay) format = SAME_DAY_DATE_FORMAT;
+    else format = isSameYear ? SAME_YEAR_DATE_FORMAT : DEFAULT_DATE_FORMAT;
 
     return (
         <div className="email">

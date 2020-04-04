@@ -1,24 +1,23 @@
 import React from 'react';
-import Moment from 'react-moment';
 
 import { DateRange } from '../types/index';
+import { formatDate } from '../utils/date-helper';
 
 interface Props {
     dateRange: DateRange;
-    onClick: () => void;
-    tempDateRange: DateRange | null;
+    toggleDatePicker: () => void;
+    tempDateRange: DateRange;
 }
 
-const CalendarInput: React.FC<Props> = ({ dateRange, onClick, tempDateRange }) => {
-    const { startDate, endDate } = tempDateRange || dateRange;
+const CalendarInput: React.FC<Props> = ({ dateRange, toggleDatePicker, tempDateRange }) => {
+    const hasTempDates = Boolean(tempDateRange?.startDate && tempDateRange?.endDate);
+    const { startDate, endDate } = hasTempDates ? tempDateRange : dateRange;
 
     return (
-        <div className="calendar-input" onClick={onClick}>
+        <div className="calendar-input" onClick={toggleDatePicker}>
             <img className="calendar-input__icon" src="../../public/images/icon_calender.svg" />
             <div className="calendar-input__dates">
-                <Moment date={startDate} format="YYYY/M/D" />
-                <span> - </span>
-                <Moment date={endDate} format="YYYY/M/D" />
+                {formatDate(startDate)} - {formatDate(endDate)}
             </div>
         </div>
     );
