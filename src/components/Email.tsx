@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import { EmailType } from '../types/index';
+import { EmailType } from 'types';
 import { DEFAULT_DATE_FORMAT, SAME_YEAR_DATE_FORMAT, SAME_DAY_DATE_FORMAT } from '../utils/date-helper';
 
 const Email: React.FC<EmailType> = ({ from, to, subject, body, messageCount, hasAttachment, date }) => {

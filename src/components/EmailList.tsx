@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { DateRange, EmailType, SetNumber } from '../types/index';
+import { DateRange, EmailType, SetNumber } from 'types';
 
 import { getEmailData } from '../utils/email-helper';
 import { setToStart, setToEnd } from '../utils/date-helper';

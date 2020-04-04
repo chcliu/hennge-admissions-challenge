@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DateRange } from '../types/index';
+import { DateRange } from 'types';
 import { formatDate } from '../utils/date-helper';
 
 interface Props {

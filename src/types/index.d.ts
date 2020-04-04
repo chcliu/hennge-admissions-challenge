@@ -1,18 +1,21 @@
 import { Dispatch, SetStateAction } from 'react';
+import { Moment } from 'moment';
+
+export interface CalendarDate {
+    year: number;
+    month: number;
+    day: number;
+}
 
 export interface DateRange {
     startDate?: Date;
     endDate?: Date;
 }
 
-export type HTMLElementEvent<T extends HTMLElement> = Event & {
-    target: T;
-    currentTarget: T;
-};
-
-export type SetNumber = Dispatch<SetStateAction<number>>;
-
+export type SetCalendarDate = Dispatch<SetStateAction<CalendarDate>>;
 export type SetDateRange = Dispatch<SetStateAction<DateRange>>;
+export type SetMoment = Dispatch<SetStateAction<Moment>>;
+export type SetNumber = Dispatch<SetStateAction<number>>;
 
 export interface EmailType {
     from: string;

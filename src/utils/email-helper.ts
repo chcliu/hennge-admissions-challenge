@@ -2,7 +2,7 @@
 
 import _ from 'lodash';
 
-import { EmailType } from '../types/index';
+import { EmailType } from 'types';
 
 const firstPossibleDate = new Date('2019/01/01').valueOf();
 const lastPossibleDate = new Date().valueOf();

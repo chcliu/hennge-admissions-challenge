@@ -4,7 +4,7 @@ import Inbox from './Inbox';
 import ResultDisplay from './ResultDisplay';
 import DateRangeBar from './DateRangeBar';
 
-import { DateRange } from '../types/index';
+import { DateRange } from 'types';
 import '../styles/index.scss';
 
 const App: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DateRange, SetNumber } from '../types/index';
+import { DateRange, SetNumber } from 'types';
 
 import EmptyState from './EmptyState';
 import InboxHeader from './InboxHeader';
