@@ -12,10 +12,16 @@ export interface DateRange {
     endDate?: Date;
 }
 
+export interface SortSettings {
+    sortKey: string;
+    sortOrder: 'asc' | 'desc';
+}
+
 export type SetCalendarDate = Dispatch<SetStateAction<CalendarDate>>;
 export type SetDateRange = Dispatch<SetStateAction<DateRange>>;
 export type SetMoment = Dispatch<SetStateAction<Moment>>;
 export type SetNumber = Dispatch<SetStateAction<number>>;
+export type SetSortSettings = Dispatch<SetStateAction<SortSettings>>;
 
 export interface EmailType {
     from: string;

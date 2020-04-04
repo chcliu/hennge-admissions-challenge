@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import _ from 'lodash';
 
-import { DateRange, EmailType, SetNumber } from 'types';
+import { DateRange, EmailType, SetNumber, SortSettings } from 'types';
 
 import { getEmailData } from '../utils/email-helper';
 import { setToStart, setToEnd } from '../utils/date-helper';
@@ -11,11 +12,12 @@ interface Props {
     dateRange: DateRange;
     emailCount: number;
     setEmailCount: SetNumber;
+    sortSettings: SortSettings;
 }
 
 const emailData = getEmailData();
 
-const EmailList: React.FC<Props> = ({ dateRange, emailCount, setEmailCount }) => {
+const EmailList: React.FC<Props> = ({ dateRange, emailCount, setEmailCount, sortSettings }) => {
     const { startDate, endDate } = dateRange;
     const [emails, setEmails] = useState<Array<EmailType>>([]);
 
@@ -25,8 +27,11 @@ const EmailList: React.FC<Props> = ({ dateRange, emailCount, setEmailCount }) =>
 
         const filteredEmails = emailData.filter((email) => isAfterStartDate(email.date) && isBeforeEndDate(email.date));
         if (emailCount !== filteredEmails.length) setEmailCount(filteredEmails.length);
-        setEmails(filteredEmails);
-    }, [dateRange]);
+
+        const { sortKey, sortOrder } = sortSettings;
+        const sortedEmails = _.orderBy(filteredEmails, sortKey, sortOrder);
+        setEmails(sortedEmails);
+    }, [dateRange, sortSettings]);
 
     return (
         <div className="email-list">

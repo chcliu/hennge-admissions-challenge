@@ -1,5 +1,5 @@
-import React from 'react';
-import { DateRange, SetNumber } from 'types';
+import React, { useState } from 'react';
+import { DateRange, SetNumber, SortSettings } from 'types';
 
 import EmptyState from './EmptyState';
 import InboxHeader from './InboxHeader';
@@ -12,11 +12,17 @@ interface Props {
 }
 
 const Inbox: React.FC<Props> = ({ dateRange, emailCount, setEmailCount }) => {
+    const [sortSettings, setSortSettings] = useState<SortSettings>({ sortKey: 'date', sortOrder: 'desc' });
     return (
         <>
             <div className="inbox">
-                <InboxHeader />
-                <EmailList dateRange={dateRange} emailCount={emailCount} setEmailCount={setEmailCount} />
+                <InboxHeader setSortSettings={setSortSettings} sortSettings={sortSettings} />
+                <EmailList
+                    dateRange={dateRange}
+                    emailCount={emailCount}
+                    setEmailCount={setEmailCount}
+                    sortSettings={sortSettings}
+                />
             </div>
             {!emailCount && <EmptyState />}
         </>
