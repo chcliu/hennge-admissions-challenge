@@ -1,5 +1,5 @@
 .date-range-bar {
-    width: 18rem;
+    width: 20rem;
     height: 2.5rem;
     display: grid;
     grid-template-columns: $date-range-bar-columns;
@@ -11,9 +11,6 @@
     border: $default-border-settings;
     border-radius: 0 5px 5px 0;
     @include date-input-box-shadow;
-}
-.date-range-bar__button:focus {
-    outline: none;
 }
 
 .date-range-bar__search-icon {

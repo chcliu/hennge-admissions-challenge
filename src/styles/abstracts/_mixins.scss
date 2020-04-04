@@ -1,0 +1,22 @@
+@mixin overflow-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin date-input-box-shadow {
+    -webkit-box-shadow: $input-box-shadow;
+    -moz-box-shadow: $input-box-shadow;
+    box-shadow: $input-box-shadow;
+}
+@mixin date-input-box-shadow {
+    -webkit-box-shadow: $input-box-shadow;
+    -moz-box-shadow: $input-box-shadow;
+    box-shadow: $input-box-shadow;
+}
+
+@mixin date-picker-box-shadow {
+    -webkit-box-shadow: $picker-box-shadow;
+    -moz-box-shadow: $picker-box-shadow;
+    box-shadow: $picker-box-shadow;
+}

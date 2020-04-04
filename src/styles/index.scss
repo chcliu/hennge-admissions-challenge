@@ -1,12 +1,20 @@
-@import './abstracts/variables';
+@import 
+    './abstracts/variables',
+    './abstracts/mixins';
 
 @import './layout/grid';
 
-@import './components/date-input';
-@import './components/date-picker';
-@import './components/date-range-bar';
-@import './components/email-list';
-@import './components/email';
-@import './components/empty-state';
-@import './components/inbox-header';
-@import './components/result-display';
+@import 
+    './components/calendar', 
+    './components/date-input', 
+    './components/date-picker', 
+    './components/date-range-bar',
+    './components/email-list', 
+    './components/email', 
+    './components/empty-state', 
+    './components/inbox-header',
+    './components/result-display';
+
+.clickable {
+    cursor: pointer;
+}
