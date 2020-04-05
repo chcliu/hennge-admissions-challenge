@@ -26,4 +26,19 @@
 }
 .inbox-header__date {
     grid-column: 8;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.inbox-header__icon {
+    padding: 0 0.5rem;
+    width: 0.6rem;
+    height: 0.5rem;
+    cursor: pointer;
+}
+
+.inbox-header__icon-rotated {
+    transform: rotate(180deg);
 }
