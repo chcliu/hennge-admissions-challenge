@@ -12,11 +12,21 @@
     font-weight: bold;
     color: $header-text-color;
     background-color: $primary-color;
+
+    @media only screen and (max-width: $mobile-screen-max-width) {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.inbox-header__title {
+    padding: 0 0.5rem;
+    border-left: 1px solid $header-text-color;
 }
 
 .inbox-header__from {
     grid-column: 1;
-    padding-left: 1rem;
+    padding: 0 0.5rem 0 1rem;
 }
 .inbox-header__to {
     grid-column: 3;
@@ -25,7 +35,7 @@
     grid-column: 5;
 }
 .inbox-header__date {
-    grid-column: 8;
+    grid-column: 7;
 
     display: flex;
     justify-content: start;
@@ -37,8 +47,18 @@
     width: 0.6rem;
     height: 0.5rem;
     cursor: pointer;
+    @media only screen and (max-width: $mobile-screen-max-width) {
+        padding: 0 0 0 0.3rem;
+    }
 }
 
 .inbox-header__icon-rotated {
     transform: rotate(180deg);
+    @media only screen and (max-width: $mobile-screen-max-width) {
+        padding: 0 0.3rem 0 0;
+    }
+}
+
+.inbox-header__selected-sort {
+    color: black;
 }

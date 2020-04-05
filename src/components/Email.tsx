@@ -17,6 +17,7 @@ const Email: React.FC<EmailType> = ({ from, to, subject, body, messageCount, has
     return (
         <>
             <div className="email" onClick={(): void => setIsToggled(!isToggled)}>
+                <img className="email__mobile-icon" src="../../public/images/icon_mail_sp.svg" />
                 <span className="email__from">{from}</span>
 
                 <span className="email__to">{to}</span>
@@ -30,7 +31,7 @@ const Email: React.FC<EmailType> = ({ from, to, subject, body, messageCount, has
                 <span className="email__date">{dateMoment.format(format)}</span>
 
                 <img
-                    className={isToggled ? 'email__toggle-icon' : 'hidden'}
+                    className={isToggled ? 'email__toggle-icon-toggled' : 'email__toggle-icon'}
                     src="../../public/images/icon_arrow02.svg"
                 />
             </div>

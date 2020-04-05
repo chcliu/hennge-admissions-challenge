@@ -4,13 +4,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: $default-font-family;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
 }
 
 #root {
     height: 100%;
-    padding: 0% 5%;
     display: flex;
     flex-direction: column;
+    @media only screen and (min-width: $desktop-screen-min-width) {
+        padding: 0% 5%;
+    }
 }
 
 button:focus {

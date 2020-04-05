@@ -4,6 +4,9 @@
     display: grid;
     grid-template-columns: $date-range-bar-columns;
     margin: 1.5rem 0 1.3rem 0;
+    @media only screen and (max-width: $mobile-screen-max-width) {
+        padding: 0% 5%;
+    }
 }
 
 .date-range-bar__button {
