@@ -19,6 +19,7 @@ const DateRangeBar: React.FC<Props> = ({ dateRange, setDateRange }) => {
     };
     const onSearchButtonClick = (): void => {
         if (tempDateRange?.startDate && tempDateRange?.endDate) setDateRange(tempDateRange);
+        toggleDatePicker();
     };
 
     return (
@@ -31,7 +32,6 @@ const DateRangeBar: React.FC<Props> = ({ dateRange, setDateRange }) => {
                 setTempDateRange={setTempDateRange}
                 showDatePicker={showDatePicker}
                 tempDateRange={tempDateRange}
-                toggleDatePicker={toggleDatePicker}
             />
         </div>
     );

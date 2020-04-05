@@ -8,7 +8,12 @@ export const DEFAULT_DATE_FORMAT = 'YYYY/M/D';
 export const SAME_YEAR_DATE_FORMAT = 'MMM DD';
 export const SAME_DAY_DATE_FORMAT = 'H:mm';
 
+export const DAYS_IN_A_WEEK = 7;
 export const DAYS_OF_THE_WEEK = ['S', 'M', 'T', 'W', 'Th', 'F', 'Su'];
+export const DEFAULT_CALENDAR_DAY_CLASS = 'calendar__day clickable';
+export const HIDDEN_CALENDAR_DAY_CLASS = 'calendar__day calendar__hidden';
+export const SELECTED_CALENDAR_DAY_CLASS = 'calendar__day calendar__selected';
+export const DOUBLE_SELECTED_CALENDAR_DAY_CLASS = 'calendar__day calendar__selected calendar__double-selected';
 
 export const formatDate = (date?: Date): string => moment(date).format(DEFAULT_DATE_FORMAT);
 

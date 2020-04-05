@@ -11,10 +11,9 @@ interface Props {
     setTempDateRange: SetDateRange;
     showDatePicker: boolean;
     tempDateRange: DateRange;
-    toggleDatePicker: () => void;
 }
 
-const DatePicker: React.FC<Props> = ({ setTempDateRange, showDatePicker, toggleDatePicker, tempDateRange }) => {
+const DatePicker: React.FC<Props> = ({ setTempDateRange, showDatePicker, tempDateRange }) => {
     const [calendarDate, setCalendarDate] = useState(convertToCalendarDate(moment()));
 
     const datePickerClass = showDatePicker ? '' : ' hidden';
@@ -22,12 +21,7 @@ const DatePicker: React.FC<Props> = ({ setTempDateRange, showDatePicker, toggleD
     return (
         <div className={'date-picker' + datePickerClass}>
             <DatePickerHeader calendarDate={calendarDate} setCalendarDate={setCalendarDate} />
-            <Calendar
-                setTempDateRange={setTempDateRange}
-                tempDateRange={tempDateRange}
-                toggleDatePicker={toggleDatePicker}
-                calendarDate={calendarDate}
-            />
+            <Calendar setTempDateRange={setTempDateRange} tempDateRange={tempDateRange} calendarDate={calendarDate} />
         </div>
     );
 };
