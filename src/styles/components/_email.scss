@@ -54,3 +54,23 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+.email__toggle-icon {
+    height: 0.8rem;
+    width: 0.5rem;
+    justify-self: center;
+    transform: rotate(-90deg);
+}
+
+.email__body {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ghostwhite;
+}
+
+.email__body-text {
+    max-width: 65%;
+    text-align: center;
+}
