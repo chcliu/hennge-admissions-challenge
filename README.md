@@ -1,6 +1,7 @@
 # Introduction
 
 This repository is a HENNGE Admission Challenge submission by Charles Liu.
+
 The project is a mock email system based on HENNGE's guidelines within a week. 
 
 It was made using React / Typescript / Sass with custom Webpack configuration and includes implementation of a given UI mockup with some additional features.
